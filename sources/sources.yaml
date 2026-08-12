@@ -1,0 +1,58 @@
+sources:
+
+  - name: Google Search Central
+    category: seo
+    type: official
+    url: https://developers.google.com/search/blog
+    rss: https://developers.google.com/search/blog/feed.xml
+
+  - name: Google Search documentation updates
+    category: seo
+    type: official
+    url: https://developers.google.com/search/updates
+    rss: https://developers.google.com/search/updates/search_docs_updates.rss
+
+  - name: Google Ads
+    category: advertising
+    type: official
+    url: https://ads.google.com/home/resources/
+
+  - name: Meta for Business
+    category: advertising
+    type: official
+    url: https://www.facebook.com/business/news
+
+  - name: LinkedIn Marketing Solutions
+    category: social
+    type: official
+    url: https://business.linkedin.com/marketing-solutions/blog
+
+  - name: TikTok for Business
+    category: social
+    type: official
+    url: https://www.tiktok.com/business/
+
+  - name: YouTube Official Blog
+    category: social
+    type: official
+    url: https://blog.youtube/
+
+  - name: OpenAI
+    category: ai
+    type: official
+    url: https://openai.com/news/
+
+  - name: Google AI
+    category: ai
+    type: official
+    url: https://blog.google/technology/ai/
+
+  - name: Anthropic
+    category: ai
+    type: official
+    url: https://www.anthropic.com/news
+
+  - name: HubSpot Marketing
+    category: marketing
+    type: official
+    url: https://blog.hubspot.com/marketing
