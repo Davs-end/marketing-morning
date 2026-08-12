@@ -68,6 +68,14 @@ jobs:
           echo "Configuration email : OK"
           echo "Expediteur configure : $GMAIL_SENDER"
 
+      - name: Envoyer la veille
+        env:
+          GMAIL_SENDER: ${{ secrets.GMAIL_SENDER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          GMAIL_RECIPIENT: ${{ secrets.GMAIL_RECIPIENT }}
+        run: |
+          python scripts/send_email.py
+
       - name: Afficher le mail genere
         run: |
           echo "===== EMAIL MARKETING MORNING ====="
