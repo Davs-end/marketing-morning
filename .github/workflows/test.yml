@@ -24,7 +24,13 @@ jobs:
         run: |
           python scripts/collect.py
 
-      - name: Afficher les resultats
+      - name: Analyser avec Gemini
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          echo "===== ARTICLES COLLECTES ====="
-          cat articles.yaml
+          python scripts/analyze.py
+
+      - name: Afficher l'analyse
+        run: |
+          echo "===== ANALYSE MARKETING ====="
+          cat analysis.json
