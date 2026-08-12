@@ -34,3 +34,14 @@ jobs:
         run: |
           echo "===== ANALYSE MARKETING ====="
           cat analysis.json
+
+      - name: Afficher le rapport d'execution
+        if: always()
+        run: |
+          echo "===== RAPPORT D'EXECUTION ====="
+
+          if [ -f execution_report.json ]; then
+            cat execution_report.json
+          else
+            echo "execution_report.json introuvable"
+          fi
