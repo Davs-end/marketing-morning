@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  collect:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,7 +16,15 @@ jobs:
         with:
           python-version: '3.13'
 
-      - name: Tester Python
+      - name: Installer les dependances
         run: |
-          python --version
-          python -c "print('Marketing Morning fonctionne !')"
+          pip install -r requirements.txt
+
+      - name: Collecter les articles
+        run: |
+          python scripts/collect.py
+
+      - name: Afficher les resultats
+        run: |
+          echo "===== ARTICLES COLLECTES ====="
+          cat articles.yaml
