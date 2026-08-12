@@ -1,3 +1,4 @@
 PyYAML
 google-genai
 pydantic
+beautifulsoup4
