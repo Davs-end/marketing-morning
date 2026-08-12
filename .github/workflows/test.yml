@@ -45,3 +45,12 @@ jobs:
           else
             echo "execution_report.json introuvable"
           fi
+
+      - name: Generer le mail
+        run: |
+          python scripts/generate_email.py
+
+      - name: Afficher le mail genere
+        run: |
+          echo "===== EMAIL MARKETING MORNING ====="
+          cat marketing_morning.html
