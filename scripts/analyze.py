@@ -122,10 +122,7 @@ def fetch_page(url):
 def prepare_articles(articles):
     print(f"Articles collectés dans les RSS : {len(articles)}")
 
-    recent_articles = [
-        article for article in articles
-        if is_recent(article)
-    ]
+    recent_articles = articles
 
     print(f"Articles récents retenus : {len(recent_articles)}")
 
