@@ -582,13 +582,24 @@ def main():
         articles
     )
 
-    if not prepared_articles:
+   if not prepared_articles:
 
-        print(
-            "Aucune page récente exploitable."
-        )
+    print(
+        "Aucune page récente exploitable."
+    )
 
-        return
+    result = AnalysisResult(
+        articles=[]
+    )
+
+    save_result(result)
+
+    print(
+        "Analyse vide enregistrée dans "
+        "analysis.json"
+    )
+
+    return
 
     # -----------------------------------------------------
     # PROMPT
