@@ -1,0 +1,22 @@
+name: Test Marketing Morning
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Recuperer le projet
+        uses: actions/checkout@v6
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Tester Python
+        run: |
+          python --version
+          python -c "print('Marketing Morning fonctionne !')"
