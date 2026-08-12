@@ -50,6 +50,24 @@ jobs:
         run: |
           python scripts/generate_email.py
 
+      - name: Verifier la configuration email
+        env:
+          GMAIL_SENDER: ${{ secrets.GMAIL_SENDER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: |
+          if [ -z "$GMAIL_SENDER" ]; then
+            echo "ERREUR : GMAIL_SENDER est absent"
+            exit 1
+          fi
+
+          if [ -z "$GMAIL_APP_PASSWORD" ]; then
+            echo "ERREUR : GMAIL_APP_PASSWORD est absent"
+            exit 1
+          fi
+
+          echo "Configuration email : OK"
+          echo "Expediteur configure : $GMAIL_SENDER"
+
       - name: Afficher le mail genere
         run: |
           echo "===== EMAIL MARKETING MORNING ====="
